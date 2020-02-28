@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
-
 const Login = props => {
   const [user, setUser] = useState({
     username: "",
@@ -24,4 +23,26 @@ const Login = props => {
       })
       .catch(error => console.log("Failed Login", error));
   };
-}
+  <div>
+  <h1 className="header">Welcome to the Bubble App!</h1>
+  <form onSubmit={handleSubmit}>
+    <label>Username:</label>
+    <input
+      type="text"
+      name="username"
+      placeholder="Username"
+      value={user.username}
+      onChange={handleChange}
+    />
+    <label>Password:</label>
+    <input
+      type="password"
+      name="password"
+      placeholder="Password"
+      value={user.password}
+      onChange={handleChange}
+    />
+    <button type="submit">Log In</button>
+  </form>
+</div>
+};
