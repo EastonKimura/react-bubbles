@@ -46,3 +46,5 @@ const Login = props => {
   </form>
 </div>
 };
+
+ export default Login;
